@@ -1,0 +1,13 @@
+@if (counter() != 0) {
+<h3>La aplicación cargará cuando pasen {{ counter() }}s</h3>
+} @else {
+<div class="alert alert-success" role="alert">
+    Componente cargado correctamente!
+</div>
+}
+<br />
+<div class="d-flex justify-content-center w-100">
+    @defer (on timer(5s)) {
+    <app-cat></app-cat>
+    }
+</div>

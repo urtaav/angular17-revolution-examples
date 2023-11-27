@@ -1,0 +1,13 @@
+<h3>El componente cargará cuando "Comida" sea al menos de 3</h3>
+<br />
+<div class="row d-flex justify-content-center align-items-center mb-5">
+  <p class="col-2 m-0">Comida: {{ comida() }}</p>
+  <button class="col-2 btn btn-primary" (click)="comida.set(comida() + 1)">
+    Dar Comida
+  </button>
+</div>
+<div class="d-flex justify-content-center w-100">
+  @defer(when comida() >= 3){
+  <app-cat></app-cat>
+  }
+</div>

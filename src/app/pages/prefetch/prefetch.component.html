@@ -1,0 +1,13 @@
+<h3>El componente cargará cuando se pulse el botón de prefetch y renderizará cuando se pulse el botón de show</h3>
+<br>
+<div class="text-center w-100 mb-4">
+    <button class="btn btn-primary m-2" (click)="prefetch.set(true)">Prefetch</button>
+    <button class="btn btn-primary m-2" (click)="show.set(true)">Show</button>
+</div>
+<div class="d-flex justify-content-center w-100">
+    @defer (when show(); prefetch when prefetch()) {
+        <app-cat></app-cat>
+    }@placeholder {
+        <app-placeholder></app-placeholder>
+    }
+</div>

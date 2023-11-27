@@ -1,0 +1,23 @@
+<div class="row h-100">
+    <div class="col-6 h-100 overflow-auto">
+        <h3>El componente cargará al interactuar con el placeholder</h3>
+        <br>
+        <div class="d-flex flex-column justify-content-center w-100">
+            @defer (on interaction) {
+                <app-cat></app-cat>
+            }@placeholder {
+                <app-placeholder></app-placeholder>
+            }
+        </div>
+    </div>
+    <div class="col-6 h-100 overflow-auto">
+        <h3>El componente cargará al interactuar con la comida</h3>
+        <br>
+        <div class="d-flex flex-column justify-content-center w-100">
+            <h1 #food><span class="badge bg-secondary">Comida</span></h1>
+            @defer (on interaction(food)) {
+                <app-dog></app-dog>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="row p-4">
+  <div class="col-sm-3">
+    <app-menu (onPage)="setPage($event)"></app-menu>
+    <hr class="d-sm-none">
+  </div>
+  <div class="col-sm-9">
+    <a class="blog-header-logo text-body-emphasis text-decoration-none" href="#">Deferrable Views</a>
+    @switch (page()) { @case('when'){
+      <app-when></app-when>
+      } @case('idle'){
+      <app-idle></app-idle>
+      } @case('immediate'){
+      <app-inmediate></app-inmediate>
+      } @case('timer'){
+      <app-timmer></app-timmer>
+      } @case('viewport'){
+      <app-viewport></app-viewport>
+      } @case('interaction'){
+      <app-interaction></app-interaction>
+      } @case('hover'){
+      <app-hover></app-hover>
+      } @case('prefetch'){
+      <app-prefetch></app-prefetch>
+      } }
+  </div>
+</div>

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-angular,
+.bg-dark {
+  background-color: oklch(16.93% .004 285.95) !important;
+}
+.bg-primary{
+  background-color: oklch(69.02% .277 332.77) !important;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  background-color: oklch(69.02% .277 332.77) !important;
+}

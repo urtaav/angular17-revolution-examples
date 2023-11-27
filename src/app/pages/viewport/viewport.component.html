@@ -1,0 +1,26 @@
+<div class="row h-100">
+    <div class="col-6 overflow-auto" style="height: 300px;">
+        <h3>El componente cargará cuando el placeholder entre en el viewport</h3>
+        <br>
+        <div class="d-flex flex-column justify-content-center w-100">
+            <app-lorem-ipsum></app-lorem-ipsum>
+            @defer (on viewport) {
+            <app-cat></app-cat>
+            }@placeholder {
+            <app-placeholder></app-placeholder>
+            }
+        </div>
+    </div>
+    <div class="col-6 overflow-auto" style="height: 300px;">
+        <h3>El componente cargará cuando la comida entre en el viewport</h3>
+        <br>
+        <div class="d-flex flex-column justify-content-center w-100">
+            <app-lorem-ipsum></app-lorem-ipsum>
+            <h1 #food><span class="badge bg-secondary">Comida</span></h1>
+            <app-lorem-ipsum></app-lorem-ipsum>
+            @defer (on viewport(food)) {
+            <app-dog></app-dog>
+            }
+        </div>
+    </div>
+</div>

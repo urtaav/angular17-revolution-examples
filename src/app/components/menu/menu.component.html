@@ -1,0 +1,12 @@
+
+  <ul class="list-group">
+    <li class="list-group-item" (click)="setPage('when')" [ngClass]="{'active': page() === 'when'}">when</li>
+    <li class="list-group-item" (click)="setPage('idle')" [ngClass]="{'active': page() === 'idle'}">on idle</li>
+    <li class="list-group-item" (click)="setPage('immediate')" [ngClass]="{'active': page() === 'immediate'}">on immediate</li>
+    <li class="list-group-item" (click)="setPage('timer')" [ngClass]="{'active': page() === 'timer'}">on timer</li>
+    <li class="list-group-item" (click)="setPage('viewport')" [ngClass]="{'active': page() === 'viewport'}">on viewport</li>
+    <li class="list-group-item" (click)="setPage('interaction')" [ngClass]="{'active': page() === 'interaction'}">on interaction</li>
+    <li class="list-group-item" (click)="setPage('hover')" [ngClass]="{'active': page() === 'hover'}">on hover</li>
+    <li class="list-group-item" (click)="setPage('prefetch')" [ngClass]="{'active': page() === 'prefetch'}">prefetch</li>
+    <li class="list-group-item" (click)="setPage('tests')" [ngClass]="{'active': page() === 'tests'}">tests</li>
+</ul>

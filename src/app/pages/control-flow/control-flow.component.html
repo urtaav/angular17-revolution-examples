@@ -1,0 +1,154 @@
+<div class="row">
+    <div class="col">
+      <h1 style="text-align: center">NG IF</h1>
+      <hr />
+      <div class="card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy0FUDcf_ANKYPDtyn_YdGnkRj7K9pH0ynug&usqp=CAU"
+          class="card-img-top"
+          alt="... "
+        />
+        <div class="card-body">
+          <h5 class="card-title">ngif</h5>
+          <p class="card-text">
+            Aplicación de la directiva ngIf a un código de html
+          </p>
+        </div>
+      </div>
+      <button
+        type="button "
+        class="btn btn-outline-info"
+        style="width: 100% "
+        (click)="showElementNgIf()"
+      >
+        Mostrar / Ocultar
+      </button>
+      @if(showIf){
+      <div class="container" style="align-content: center; margin-top: 20px ">
+        <p>
+          Parte del HTML que será cargada cuando la directiva ngIf de un valor de
+          true en el div donde se aplica. Esta directiva se suele cambiar desde
+          código mediante eventos, funciones, etc...
+        </p>
+      </div>
+      }
+    </div>
+    <div class="col">
+      <h1 style="text-align: center">NG FOR</h1>
+      <hr />
+      <div class="card">
+        <img
+          src="https://i.morioh.com/200907/e9df8df0.webp"
+          class="card-img-top"
+          alt="... "
+        />
+        <div class="card-body">
+          <h5 class="card-title">ngfor</h5>
+          <p class="card-text">
+            Aplicación de la directiva nfFor a un código html
+          </p>
+        </div>
+      </div>
+  
+      <button
+        type="button "
+        class="btn btn-outline-info"
+        style="width: 100% "
+        (click)="showFor = !showFor"
+      >
+        Cargar datos
+      </button>
+  
+      @if(showFor){
+      <div style="align-content: center; margin-top: 20px ">
+        <div>
+          <p>
+            Los datos son cargados en una lista solo definiendo un elemento. Los
+            datos se obtienen de un array situado en la clase .ts y son cargados
+            mediante la directica *nfFor = let c of array, donde c representará
+            cada uno de los elementos del array
+          </p>
+        </div>
+  
+        <ul class="list-group list-group-flush">
+          @for (c of lenguajes; track $index) {
+          <li class="list-group-item">{{ $index + 1 }} - {{ c }}</li>
+          }
+        </ul>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="row top-space" style="justify-content: center">
+    <div class="col col-7">
+      <h1 style="text-align: center">NG SWITCH</h1>
+      <hr />
+      <div class="card">
+        <img
+          src="https://webrelatedinfo.com/images/posts/Angular-ngSwitch-33.png"
+          class="card-img-top img-fluid"
+          alt="... "
+        />
+        <div class="card-body">
+          <h5>ngSwitch</h5>
+          <div class="card-text">
+            Se mostrá un contenido dependiendo de una variable definida por
+            código. Lo intresante de esta directiva es que se puede modificar el
+            contenido del DOM en momento de ejecución. Para el ejemplo pulsar uno
+            de los tres siguientes botones para mostrar en div diferente
+          </div>
+  
+          <div
+            class="container-fluid top-space"
+            style="justify-content: space-between;display: flex;justify-content: space-around;"
+          >
+            <button type="button" class="btn btn-primary" (click)="showSwitch = 1">
+              Mostrar caso 1
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              (click)="showSwitch = 2"
+            >
+              Mostrar caso 2
+            </button>
+            <button type="button" class="btn btn-success" (click)="showSwitch = 3">
+              Mostrar caso 3
+            </button>
+            <button type="button" class="btn btn-danger" (click)="showSwitch = -1">
+              Default
+            </button>
+          </div>
+  
+          <div class="container-fluid mt-4">
+            @switch(showSwitch){ @case (1) {
+            <div class="card-text alert alert-primary">
+              Aplicación de la directiva ngSwitch a un código de html, donde
+              aparece un un tag determinado dependiendo del contenido de una
+              variable. Este es el ejemplo para el caso A
+            </div>
+            } @case (2) {
+            <div class="card-text alert alert-secondary">
+              Aplicación de la directiva ngSwitch a un código de html, donde
+              aparece un un tag determinado dependiendo del contenido de una
+              variable. Este es el ejemplo para el caso B
+            </div>
+            } @case (3) {
+            <div class="card-text alert alert-success">
+              Aplicación de la directiva ngSwitch a un código de html, donde
+              aparece un un tag determinado dependiendo del contenido de una
+              variable. Este es el ejemplo para el caso C
+            </div>
+            } @default {
+  
+            <div class="card-text alert alert-danger">
+              Aplicación de la directiva ngSwitch a un código de html, donde
+              aparece un un tag determinado dependiendo del contenido de una
+              variable. Este es el ejemplo para el caso por defecto
+            </div>
+            } }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
